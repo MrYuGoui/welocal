@@ -1,0 +1,21 @@
+{
+	"pages": [
+		"pages/index/index"
+	],
+	"requiredBackgroundModes": [
+		"location"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "点击确定"
+		}
+	},
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "定位终端模拟",
+		"navigationBarTextStyle": "black"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
+}

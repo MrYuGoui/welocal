@@ -1,0 +1,33 @@
+<view class="title">定位终端模拟</view>
+<view class="inputView">
+  <input class="input" placeholder="设备名称" placeholder-style="color: skyblue;text-align:center;"
+    bindinput="deviceInput" />
+</view>
+<view class="inputView">
+  <input class="input" placeholder="服务器地址" placeholder-style="color: skyblue;text-align:center;"
+    bindinput="serviceInput" />
+</view>
+
+<view wx:if="{{sors==='启动'}}">
+  <view class="content1">未运行</view>
+</view>
+<view wx:else>
+  <view class="content2">运行中</view>
+</view>
+
+<view wx:if="{{sors==='启动'}}">
+  <button class="btn" type="primary" bindtap="switchButton">{{sors}}</button>
+</view>
+<view wx:else>
+  <button class="btn" type="warn" bindtap="switchButton">{{sors}}</button>
+</view>
+
+<view class="info">
+  <view>经度（GCJ02）：{{lon}}</view>
+  <view>纬度（GCJ02）：{{lat}}</view>
+  <view>高度（m）：{{alt}}</view>
+  <view>速度（m/s）：{{speed}}</view>
+  <view>精确度：{{acc}}</view>
+  <view>垂直精度（m）：{{va}}</view>
+  <view>水平精度（m）：{{ha}}</view>
+</view>

@@ -1,0 +1,35 @@
+.title{
+  margin: 30rpx;
+  padding: auto;
+  font-size: 100rpx;
+  text-align:center;
+  color: darkblue;
+}
+.input{
+  padding: auto;
+  height: 100rpx;
+}
+.inputView{
+  border:  5rpx solid blue;
+  border-radius: 100rpx;
+  margin: 30rpx;
+}
+.content1{
+  text-align: center;
+  color: grey;
+}
+.content2{
+  text-align: center;
+  color: green;
+}
+.btn{
+  margin: 60rpx;
+  border-radius:40rpx;
+}
+.info{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+  font-size: 40rpx;
+  color: grey;
+}
