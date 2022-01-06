@@ -58,8 +58,7 @@ Page({
   },
   onReady: function (options) {
     var that = this;
-    wx.startLocationUpdate({
-
+    wx.startLocationUpdateBackground({
       success: (res) => {
         console.log("开启后台定位", res)
         wx.onLocationChange(function (res) {
