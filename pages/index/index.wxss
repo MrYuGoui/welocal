@@ -1,7 +1,7 @@
 .title{
-  margin: 30rpx;
+  margin: 50rpx;
   padding: auto;
-  font-size: 100rpx;
+  font-size: 80rpx;
   text-align:center;
   color: darkblue;
 }
@@ -12,7 +12,7 @@
 .inputView{
   border:  5rpx solid blue;
   border-radius: 100rpx;
-  margin: 30rpx;
+  margin: 50rpx;
 }
 .content1{
   text-align: center;
@@ -23,13 +23,13 @@
   color: green;
 }
 .btn{
-  margin: 60rpx;
+  margin: 100rpx;
   border-radius:40rpx;
 }
 .info{
   display:flex;
   flex-direction: column;
   text-align:center;
-  font-size: 40rpx;
+  font-size: 30rpx;
   color: grey;
 }

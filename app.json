@@ -13,7 +13,7 @@
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "定位终端模拟",
+		"navigationBarTitleText": "定位终端",
 		"navigationBarTextStyle": "black"
 	},
 	"style": "v2",

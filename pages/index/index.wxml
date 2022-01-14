@@ -1,11 +1,11 @@
-<view class="title">定位终端模拟</view>
+<view class="title">定位数据推送</view>
 <view class="inputView">
-  <input class="input" placeholder="设备名称" placeholder-style="color: skyblue;text-align:center;"
-    bindinput="deviceInput" />
+  <input class="input" placeholder="输入设备编号，如：CU-GPS-1" placeholder-style="color: skyblue;text-align:center;"
+    bindinput="deviceInput" style="text-align:center;"/>
 </view>
 <view class="inputView">
-  <input class="input" placeholder="服务器地址" placeholder-style="color: skyblue;text-align:center;"
-    bindinput="serviceInput" />
+  <input class="input" placeholder="输入接口地址，如：127.0.0.1:80" placeholder-style="color: skyblue;text-align:center;"
+    bindinput="serviceInput" style="text-align:center;"/>
 </view>
 
 <view wx:if="{{sors==='启动'}}">
@@ -13,6 +13,7 @@
 </view>
 <view wx:else>
   <view class="content2">运行中</view>
+  <view class="content2">{{service}}</view>
 </view>
 
 <view wx:if="{{sors==='启动'}}">
@@ -23,11 +24,11 @@
 </view>
 
 <view class="info">
-  <view>经度（GCJ02）：{{lon}}</view>
-  <view>纬度（GCJ02）：{{lat}}</view>
-  <view>高度（m）：{{alt}}</view>
-  <view>速度（m/s）：{{speed}}</view>
-  <view>精确度：{{acc}}</view>
-  <view>垂直精度（m）：{{va}}</view>
-  <view>水平精度（m）：{{ha}}</view>
+  <text>经度（GCJ02）：{{lon}}</text>
+  <text>纬度（GCJ02）：{{lat}}</text>
+  <text>高度（m）：{{alt}}</text>
+  <text>速度（m/s）：{{speed}}</text>
+  <text>精确度：{{acc}}</text>
+  <text>垂直精度（m）：{{va}}</text>
+  <text>水平精度（m）：{{ha}}</text>
 </view>

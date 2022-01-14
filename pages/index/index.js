@@ -15,7 +15,7 @@ Page({
     this.data.device = e.detail.value;
   },
   serviceInput: function (e) {
-    this.data.service = e.detail.value;
+    this.data.service = "http://"+e.detail.value+"/outdoorlable/push/mini";
   },
   switchButton: function () {
     var that = this;
@@ -71,9 +71,7 @@ Page({
             va: res.verticalAccuracy,
             ha: res.horizontalAccuracy
           })
-          // console.log("location change", res)
           if (that.data.sors === "停止") {
-            // console.log("发送")
             wx.request({
               url: that.data.service,
               data: {
@@ -81,11 +79,12 @@ Page({
                 "lat": that.data.lat,
                 "deviceId": that.data.device,
                 "alt":that.data.alt,
-                "acc":that.data.acc
+                "acc":that.data.acc,
+                "speed":that.data.speed
               },
               method: "GET",
               success(res) {
-                console.log("已发送成功")
+                console.log("推送到"+that.data.service)
               },
               fail(res) {
                 that.setData({sors:"启动"})
