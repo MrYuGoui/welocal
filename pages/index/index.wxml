@@ -1,11 +1,7 @@
 <view class="title">定位数据推送</view>
 <view class="inputView">
-  <input class="input" placeholder="输入设备编号，如：CU-GPS-1" placeholder-style="color: skyblue;text-align:center;"
+  <input class="input" placeholder="输入设备编号，默认前缀：CU-GNSS-" placeholder-style="color: skyblue;text-align:center;"
     bindinput="deviceInput" style="text-align:center;"/>
-</view>
-<view class="inputView">
-  <input class="input" placeholder="输入接口地址，如：127.0.0.1:80" placeholder-style="color: skyblue;text-align:center;"
-    bindinput="serviceInput" style="text-align:center;"/>
 </view>
 
 <view wx:if="{{sors==='启动'}}">
@@ -13,7 +9,6 @@
 </view>
 <view wx:else>
   <view class="content2">运行中</view>
-  <view class="content2">{{service}}</view>
 </view>
 
 <view wx:if="{{sors==='启动'}}">

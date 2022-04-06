@@ -1,7 +1,7 @@
 Page({
   data: {
     device: '',
-    service: '',
+    service: 'https://yuhaowei.com/outdoorlable/push/mini',
     lon: "", //经度
     lat: "", //纬度
     alt: "", //高度
@@ -12,21 +12,19 @@ Page({
     sors: "启动"
   },
   deviceInput: function (e) {
-    this.data.device = e.detail.value;
-  },
-  serviceInput: function (e) {
-    this.data.service = "http://"+e.detail.value+"/outdoorlable/push/mini";
+    let that=this;
+    that.data.device = "CU-GNSS-"+e.detail.value;
   },
   switchButton: function () {
     var that = this;
-    if (that.data.device.length === 0 || that.data.service.length === 0) {
+    if (that.data.device.length === 0) {
       // 没有填写参数
       wx.showToast({
         title: '请完整填写以上参数！',
         icon: 'none',
         duration: 1500
       })
-    } else if(that.data.device.indexOf(" ")!=-1 || that.data.service.indexOf(" ")!=-1){
+    } else if(that.data.device.indexOf(" ")!=-1){
       // 参数中有空格
       wx.showToast({
         title: '参数中有空格！',
@@ -89,7 +87,7 @@ Page({
               fail(res) {
                 that.setData({sors:"启动"})
                 wx.showToast({
-                  title: '推送失败，请核实服务地址正常，并确认处于IP白名单中，或联系后台管理员',
+                  title: '推送失败，请确认处于IP白名单中，或联系后台管理员',
                   icon: 'none',
                   duration: 2000
                 })

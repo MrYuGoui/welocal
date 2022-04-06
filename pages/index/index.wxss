@@ -1,5 +1,5 @@
 .title{
-  margin: 50rpx;
+  margin: 80rpx;
   padding: auto;
   font-size: 80rpx;
   text-align:center;
